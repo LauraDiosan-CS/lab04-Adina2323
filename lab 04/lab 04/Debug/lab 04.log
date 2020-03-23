@@ -1,4 +1,2 @@
 ﻿  Repo.cpp
-C:\Users\Adina\Desktop\Info sem2\Lab 04\lab 04\lab 04\Repo.cpp(91,17): warning C4018: '>': signed/unsigned mismatch
-C:\Users\Adina\Desktop\Info sem2\Lab 04\lab 04\lab 04\Repo.cpp(105,9): warning C4018: '<': signed/unsigned mismatch
   lab 04.vcxproj -> C:\Users\Adina\Desktop\Info sem2\Lab 04\lab 04\Debug\lab 04.exe

@@ -1,11 +1,10 @@
 #pragma once
 #include "examen.h"
-#include <vector>
 
 class Repo {
 private:
-	vector <Examen> exams;
-	const char* fisier;
+	Examen exams[101];
+	int n;
 public:
 	Repo();
 	Repo(const char* file);
@@ -13,8 +12,8 @@ public:
 	void addExam(Examen s);
 	void updateExam(Examen s,const char*, string, int);
 	int findExam(Examen s);
-	int delExam(Examen s);
-	vector <Examen> getAll();
+	void delExam(Examen s);
+	Examen* getAll();
 	int get_len();
 	Examen examAtPosition(int);
 	void saveToFile(const char* );

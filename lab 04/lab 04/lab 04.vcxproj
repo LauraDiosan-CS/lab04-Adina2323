@@ -143,12 +143,16 @@
     <ClCompile Include="ftii.cpp" />
     <ClCompile Include="Repo.cpp" />
     <ClCompile Include="service.cpp" />
+    <ClCompile Include="TestService.cpp" />
+    <ClCompile Include="TestRepository.cpp" />
     <ClCompile Include="TestRepo.cpp" />
     <ClCompile Include="UI.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="examen.h" />
     <ClInclude Include="ftii.h" />
+    <ClInclude Include="TestService.h" />
+    <ClInclude Include="TestRepository.h" />
     <ClInclude Include="TestRepo.h" />
     <ClInclude Include="UI.h" />
     <ClInclude Include="service.h" />

@@ -8,8 +8,8 @@ public:
 	Service(const Repo&);
 	void addExamen(char*,string , int);
 	Examen updateExamen(Examen s,char* , string , int );
-	int delExamen(Examen s);
+	void delExamen(Examen s);
 	int get_len();
-	vector<Examen> get_all();
+	Examen* get_all();
 	~Service();
 };

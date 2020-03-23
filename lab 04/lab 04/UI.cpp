@@ -38,7 +38,7 @@ void UI::update()
     cin >> data2;
     cout << "Give a grade: ";
     cin >> nota2;
-    this->service.updateExamen(s1, name2, data2, nota2);
+    service.updateExamen(s1, name2, data2, nota2);
 }
 void UI::printAll() {
     for (int i = 0; i < this->service.get_len(); i++)
@@ -56,9 +56,7 @@ void UI::delExam() {
     cout << "Give a grade: ";
     cin >> nota1;
     Examen s1(name, data1, nota1);
-    int rez = service.delExamen(s1);
-    if (rez == 0) cout << "Examenul a fost  sters cu succes!" << endl;
-    else cout << "Studentul NU a fost sters!" << endl;
+    service.delExamen(s1);
 }
 void UI::run() {
 

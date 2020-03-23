@@ -34,8 +34,8 @@ void TestRepo::testDel() {
 void TestRepo::testGetAll()
 {
 	repo.loadFromFile("Text.txt");
-	vector<Examen> rez = repo.getAll();
-	assert(rez.size() == 4);
+	Examen* rez = repo.getAll();
+	assert(repo.get_len() == 4);
 	repo.saveToFile("Text.txt");
 }
 void TestRepo::testUpdate()
@@ -56,8 +56,8 @@ void TestRepo::testSaveToFile()
 	int n = repo.get_len();
 	repo.addExam(Examen("Ion","1.1.1111", 19));
 	repo.saveToFile("Text.txt");
-	repo.loadFromFile("Text.txt");
-	assert(repo.getAll().size() == (n + 1));
+	repo.loadFromFile("TestStud.txt");
+	assert(repo.get_len() == (n + 1));
 }
 TestRepo::~TestRepo()
 {}

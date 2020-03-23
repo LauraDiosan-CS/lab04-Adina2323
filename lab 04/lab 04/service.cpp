@@ -10,11 +10,11 @@ void Service::addExamen(char* name, string data, int nota) {
 	Examen s1(name, data, nota);
 	repo.addExam(s1);
 }
-int Service::delExamen(Examen s)
+void Service::delExamen(Examen s)
 {
-	return repo.delExam(s);
+	repo.delExam(s);
 }
-vector <Examen> Service::get_all() {
+Examen* Service::get_all() {
 	return this->repo.getAll();
 }
 int Service::get_len() {
