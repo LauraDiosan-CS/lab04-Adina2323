@@ -1,5 +1,4 @@
 #include "UI.h"
-#include "TestRepo.h"
 #include "ftii.h"
 #include <iostream>
 using namespace std;
@@ -58,6 +57,29 @@ void UI::delExam() {
     Examen s1(name, data1, nota1);
     service.delExamen(s1);
 }
+void UI::handlenota()
+{
+    int nota;
+    cout << "Introduceti nota: ";
+    cin >> nota;
+    vector<Examen> ex = service.functienota(nota);
+    for (int i = 0; i <this->service.get_len(); i++)
+        for (int j = 0; j < ex.size(); j++) {
+          if (service.get_all()[i] == ex[j])
+                cout << this->service.get_all()[i]<<endl;
+        }
+}
+void UI::showSequence(vector<Examen> examene) {
+    for (int i = 0; i < examene.size(); i++)
+        cout << this->service.get_all()[i] << endl;
+}
+void UI::addPoint()
+{
+    char nume[250];
+    cout << "Give name: ";
+    cin >> nume;
+    service.functiebonus(nume);
+}
 void UI::run() {
 
     int opt = 1;
@@ -78,6 +100,13 @@ void UI::run() {
         if (opt == 4) {
             this->printAll();
         }
+        if (opt == 5) {
+            this->handlenota();
+        }
+        if (opt == 6) {
+            this->addPoint();
+        }
+      
         if (opt == 0) {
             break;
        }

@@ -143,6 +143,7 @@
     <ClCompile Include="ftii.cpp" />
     <ClCompile Include="Repo.cpp" />
     <ClCompile Include="service.cpp" />
+    <ClCompile Include="Undo.cpp" />
     <ClCompile Include="TestService.cpp" />
     <ClCompile Include="TestRepository.cpp" />
     <ClCompile Include="TestRepo.cpp" />
@@ -151,6 +152,7 @@
   <ItemGroup>
     <ClInclude Include="examen.h" />
     <ClInclude Include="ftii.h" />
+    <ClInclude Include="Undo.h" />
     <ClInclude Include="TestService.h" />
     <ClInclude Include="TestRepository.h" />
     <ClInclude Include="TestRepo.h" />

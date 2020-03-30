@@ -11,7 +11,7 @@ void tests()
 	Examen s2(nume2, "18.03.2020", 10);
 	strcpy_s(nume3, sizeof "Matei","Matei");
 	Examen s8(nume3, "18.03.2020", 10);
-	Examen s3(nume1, "12.02.2020", 5);
+	Examen s3(nume1, "12.02.2020",5);
 	Examen s4;
 	s4 = s2;
 	assert(s4 == s2);

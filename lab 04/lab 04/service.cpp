@@ -1,5 +1,6 @@
 #include "service.h"
 #include <algorithm>
+#include <iostream>
 Service::Service ()
 {}
 Service::Service(const Repo& r)
@@ -24,6 +25,31 @@ Examen Service::updateExamen(Examen s,char* name, string data, int nota)
 {
 	repo.updateExam(s, name, data, nota);
 	return s;
+}
+vector<Examen> Service::functienota(int nota)
+{
+	vector <Examen> examene;
+	for (int i = 0;i<repo.get_len(); i++)
+	{
+		if (repo.examAtPosition(i).getNota() > nota) {
+			examene.push_back(repo.examAtPosition(i));
+		}
+	}
+	return examene;
+}
+void Service::functiebonus(char* nume)
+{
+	for (int i = 0; i < repo.get_len(); i++)
+	{
+		Examen crtStudent = repo.examAtPosition(i);
+		if (strcmp(crtStudent.getName(),nume)==0) 
+		{
+			int nota = crtStudent.getNota();
+			nota++;
+			string data = crtStudent.getData();
+			this->updateExamen(crtStudent, crtStudent.getName(), data, nota);
+		}
+	}
 }
 Service::~Service()
 {
